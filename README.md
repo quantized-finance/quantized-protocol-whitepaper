@@ -1,6 +1,18 @@
 # quantized-protocol-whitepaper
 The whitepaper for the Quantized protocol
 
+The recent meteoric growth of bitcoin, ethereum and decentralized finance have proven to the world the value of the systems and shown that they are here to stay. Ethereum and the erc20 token are foundational to this new economy, and the erc20 token and ethereum evm have enabled a variety of applications never before possible in the world of finance. However, ethereum and the ERC 20 spec come with some significant drawbacks which make the economic activity on its Network less economical then it could be. 
+
+Many solutions have been proposed to this problem, including things like layer 2 solutions and multi-blockchain networks. While each of these solutions has its advantage and utility, there are ways to gain significant efficiencies, and therefore cost savings, by employing ethereum protocols which are much more economical in how they transfer funds between addresses. 
+
+The most advanced among these protocols is the ERC 1155 protocol, which is a multi-token protocol designed and implemented in such a way as to efficiently transfer values between internal endpoints with very low gas costs. Erc1155 enables transfers of multiple token types to multiple destinations in a single transaction in a highly efficient way.
+
+The problem with these protocols is that the industry has widely adopted the use of erc20 tokens as the standard for fungible tokens, and thus it is largely impossible to move away to a new protocol which does a better job of transferring assets.
+
+This whitepaper describes a protocol which functions to bring all of the efficiencies from ethereum's most advanced token transfer protocols to the existing defi environment, enhancing it by creating an enhanced 'quantized ERC20 specification' that features multi token transfer apis and dynamically deploys erc20 contracts backed by an ERC1155 implementation.
+
+The protocol then incentivizes users to participate by rewarding them economically for converting their existing ERC 20 token into the quantized ERC version, and provides a standard means for determining the quantized erc20 token address for any existing erc20 token, while functioning as both an active liquidity provider for uniswap v2 and an additional source of liquidity as well. Paired with uniswap, quantized has the overall effect of driving the market towards lower fees and enabling more complex swaps that are economically viable without making any major infrastructural technological changes to existing defi infrastructure - Quantized ERC20 tokens function just like regular ERC20 tokens when transacted, except with lower fee, while offering very low fee multiparty transfers calls which substantially reduce gas fees in those appplications.
+
 Quantized is a set of smart contracts which work to reduce the gas transfer fees of any ERC20 contract that employs it. Quantized does this by introducing a new set of transfer methods on quantized erc20 tokens which allow for multi-party transfers which are orders of magnitude less expensive than those performed now. 
 
 Quantized achieves this by leveraging the ERC-1155 spec, mapping every ERC20 token to a single ERC 1155 contract, using create2 to deploy erc20 proxy contracts which map the erc20 contract interface with an equivalent ID on the erc1155 contract. These 'Quantized'Erc20 contracts when called employ the backing ERC 1155 contract implementation instead, enabling all ERC 1155-specific transfer functionality to be difrectly available to the ERC20 token, thus enabling the quantized ERC-20 to be transacted much more efficiently. 
